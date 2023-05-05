@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UiControlsScreen extends StatelessWidget {
-
-  static const name = 'ui_controls_screen';
+  static const route = 'ui_controls_screen';
 
   const UiControlsScreen({super.key});
 

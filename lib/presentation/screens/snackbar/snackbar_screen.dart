@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SnackbarScreen extends StatelessWidget {
-
-  static const name = 'snackbar_screen';
+  static const route = 'snackbar_screen';
 
   const SnackbarScreen({super.key});
 
