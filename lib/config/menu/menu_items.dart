@@ -55,4 +55,14 @@ const List<MenuItem> appMenuItems = [
       subTitle: 'Listas infinitas y pull to refresh',
       link: '/infinite',
       icon: Icons.list_alt_outlined),
+  MenuItem(
+      title: 'CounterSceen',
+      subTitle: 'Ejercicio con Riverpod',
+      link: '/counter',
+      icon: Icons.numbers),
+  MenuItem(
+      title: 'Cambiar Tema',
+      subTitle: 'Cambiar Tema de la App',
+      link: '/theme_changer',
+      icon: Icons.color_lens_outlined),
 ];
