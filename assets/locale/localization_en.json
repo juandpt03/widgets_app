@@ -1,5 +1,4 @@
 {
-    "good_morning": "Good Morning",
-    "how_are_you": "How are you",
-    "welcome": "Welcome"
+    "buttons": "Buttons",
+    "var_buttons": "Various Buttons on Flutter"
 }

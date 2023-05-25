@@ -1,5 +1,4 @@
 {
-    "good_morning": "صباح الخير",
-    "how_are_you": "كيف حالكم",
-    "welcome": "أهلا وسهلا"
+    "buttons": "Botones",
+    "var_buttons": "Varios Botones en flutter"
 }
