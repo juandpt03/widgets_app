@@ -18,5 +18,11 @@
     "counter_sceen": "Counter Sceen",
     "sub_counter": "Ejercicio con Riverpod",
     "change_theme": "Cambiar Tema",
-    "change_apptheme": "Cambiar Tema de la App"
+    "change_apptheme": "Cambiar Tema de la App",
+    "intro_tit_1": "Busca la comida",
+    "intro_sub_1": "Non mollit magna ipsum dolore dolore aliquip. Commodo .",
+    "intro_tit_2": "Entrega rápida",
+    "intro_sub_2": "Laborum est proident aliqua commodo pariatur dolor..",
+    "intro_tit_3": "Disfruta la comida",
+    "intro_sub_3": "Nostrud incididunt irure irure aute veniam exercitation consectetur amet proident minim fugiat incididunt aute exercitation."
 }

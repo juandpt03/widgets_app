@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
 
 class SlideInfo {
   final String title;
@@ -14,22 +15,6 @@ class SlideInfo {
   });
 }
 
-final slides = <SlideInfo>[
-  SlideInfo(
-      title: 'Busca la comida',
-      caption: 'Non mollit magna ipsum dolore dolore aliquip. Commodo .',
-      imageUrl: 'assets/images/1.png'),
-  SlideInfo(
-      title: 'Entrega rápida',
-      caption: ' Laborum est proident aliqua commodo pariatur dolor..',
-      imageUrl: 'assets/images/2.png'),
-  SlideInfo(
-      title: 'Disfruta la comida',
-      caption:
-          'Nostrud incididunt irure irure aute veniam exercitation consectetur amet proident minim fugiat incididunt aute exercitation. .',
-      imageUrl: 'assets/images/3.png'),
-];
-
 class AppTutorialScreen extends StatefulWidget {
   static const route = 'tutorial_screen';
 
@@ -42,11 +27,12 @@ class AppTutorialScreen extends StatefulWidget {
 class _AppTutorialScreenState extends State<AppTutorialScreen> {
   PageController pageViewController = PageController();
   bool endReach = false;
+  List<SlideInfo> slides = [];
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+
     pageViewController.addListener(() {
       final page = pageViewController.page ?? 0;
       if (!endReach && page >= slides.length - 1.5) {
@@ -65,6 +51,13 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
 
   @override
   Widget build(BuildContext context) {
+    slides = <SlideInfo>[
+      for (var i = 1; i <= 3; i++)
+        SlideInfo(
+            title: AppLocalizations.of(context)!.text("intro_tit_$i"),
+            caption: AppLocalizations.of(context)!.text("intro_sub_$i"),
+            imageUrl: 'assets/images/$i.png'),
+    ];
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
