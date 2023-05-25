@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class SideMenu extends StatefulWidget {
@@ -31,7 +32,7 @@ class _SideMenuState extends State<SideMenu> {
         ...appMenuItems.sublist(0, 3).map(
               (item) => NavigationDrawerDestination(
                 icon: Icon(item.icon),
-                label: Text(item.title),
+                label: Text(AppLocalizations.of(context)!.text(item.title)),
               ),
             ),
         const Padding(
@@ -45,7 +46,9 @@ class _SideMenuState extends State<SideMenu> {
         ...appMenuItems.sublist(3).map(
               (item) => NavigationDrawerDestination(
                 icon: Icon(item.icon),
-                label: Text(item.title),
+                label: Text(
+                  AppLocalizations.of(context)!.text(item.title),
+                ),
               ),
             ),
       ],
