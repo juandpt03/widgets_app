@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 class ThemeChanger extends ConsumerWidget {
@@ -12,7 +13,7 @@ class ThemeChanger extends ConsumerWidget {
     final modeDark = ref.watch(themeNotifierProvider).isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('ThemeChanger'),
+          title: const Text('Theme Changer'),
           actions: [
             IconButton(
               icon: Icon(modeDark ? Icons.dark_mode : Icons.light_mode),
@@ -40,7 +41,7 @@ class _ThemeChangerView extends ConsumerWidget {
         final color = colors[index];
         return RadioListTile(
           title: Text(
-            'Este color',
+            AppLocalizations.of(context)!.text('this_color'),
             style: TextStyle(color: color),
           ),
           subtitle: Text('${color.value}'),
