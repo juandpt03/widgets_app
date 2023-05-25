@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
 
 class ProgressScreen extends StatelessWidget {
   static const route = 'progress_screen';
@@ -21,20 +22,21 @@ class _ProgressView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Column(
         children: [
-          SizedBox(height: 30),
-          Text('Circular Progress indicator'),
-          SizedBox(height: 10),
-          CircularProgressIndicator(
+          const SizedBox(height: 30),
+          const Text('Circular Progress indicator'),
+          const SizedBox(height: 10),
+          const CircularProgressIndicator(
             strokeWidth: 2,
             backgroundColor: Colors.black45,
           ),
-          SizedBox(height: 30),
-          Text('Circular Progress indicator Controlado'),
-          SizedBox(height: 10),
-          _ControlledProgressIndicator(),
+          const SizedBox(height: 30),
+          Text(
+              'Circular Progress indicator ${AppLocalizations.of(context)!.text('checked')} '),
+          const SizedBox(height: 10),
+          const _ControlledProgressIndicator(),
         ],
       ),
     );
