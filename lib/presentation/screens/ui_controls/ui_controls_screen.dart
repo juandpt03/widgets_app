@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../config/localisation/localizations.dart';
+import '../../../models/locale_model.dart';
+
 class UiControlsScreen extends StatelessWidget {
   static const route = 'ui_controls_screen';
 
@@ -31,15 +34,18 @@ class _UIControlsViewState extends State<UIControlsView> {
   bool wantsBreakfast = false;
   bool wantsLunch = false;
   bool wantsDinner = false;
-
   @override
   Widget build(BuildContext context) {
+    ///
+    /// Class File with localised text
+    ///
+    LocaleModel st = AppLocalizations.of(context)!.value();
     return ListView(
       physics: const ClampingScrollPhysics(),
       children: [
         SwitchListTile(
           title: const Text('Developer Mode'),
-          subtitle: const Text('Controles adicionales'),
+          subtitle: Text(st.additionalControls),
           value: isDeveloper,
           onChanged: (value) {
             setState(() {});
@@ -47,14 +53,14 @@ class _UIControlsViewState extends State<UIControlsView> {
           },
         ),
         ExpansionTile(
-          title: const Text('Vehículos de Transportes'),
+          title: Text(st.transportVehicles),
           subtitle: Text(
             selectedTransportation.toString(),
           ),
           children: [
             RadioListTile(
-              title: const Text('by car'),
-              subtitle: const Text('Viajar por carro'),
+              title: Text(st.byCar),
+              subtitle: Text(st.travelByCar),
               value: Transportation.car,
               groupValue: selectedTransportation,
               onChanged: (value) {
@@ -63,8 +69,8 @@ class _UIControlsViewState extends State<UIControlsView> {
               },
             ),
             RadioListTile(
-              title: const Text('by plane'),
-              subtitle: const Text('Viajar por avión'),
+              title: Text(st.byPlane),
+              subtitle: Text(st.travelByPlane),
               value: Transportation.plane,
               groupValue: selectedTransportation,
               onChanged: (value) {
@@ -73,8 +79,8 @@ class _UIControlsViewState extends State<UIControlsView> {
               },
             ),
             RadioListTile(
-              title: const Text('by boat'),
-              subtitle: const Text('Viajar por barco'),
+              title: Text(st.byBoat),
+              subtitle: Text(st.travelByBoat),
               value: Transportation.boat,
               groupValue: selectedTransportation,
               onChanged: (value) {
@@ -83,8 +89,8 @@ class _UIControlsViewState extends State<UIControlsView> {
               },
             ),
             RadioListTile(
-              title: const Text('by submarine'),
-              subtitle: const Text('Viajar por submarino'),
+              title: Text(st.bySubmarine),
+              subtitle: Text(st.travelBySubm),
               value: Transportation.submarine,
               groupValue: selectedTransportation,
               onChanged: (value) {
@@ -95,7 +101,7 @@ class _UIControlsViewState extends State<UIControlsView> {
           ],
         ),
         CheckboxListTile(
-          title: const Text('Desayuno?'),
+          title: Text("${st.breakfast}?"),
           value: wantsBreakfast,
           onChanged: (value) {
             wantsBreakfast = !wantsBreakfast;
@@ -103,7 +109,7 @@ class _UIControlsViewState extends State<UIControlsView> {
           },
         ),
         CheckboxListTile(
-          title: const Text('Almuerzo?'),
+          title: Text("${st.lunch}?"),
           value: wantsLunch,
           onChanged: (value) {
             wantsLunch = !wantsLunch;
@@ -111,7 +117,7 @@ class _UIControlsViewState extends State<UIControlsView> {
           },
         ),
         CheckboxListTile(
-          title: const Text('Cena?'),
+          title: Text("${st.dinner}?"),
           value: wantsDinner,
           onChanged: (value) {
             wantsDinner = !wantsDinner;
