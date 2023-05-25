@@ -76,9 +76,9 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
             right: 20,
             top: 50,
             child: TextButton(
-              child: const Text(
-                'Salir',
-                style: TextStyle(
+              child: Text(
+                AppLocalizations.of(context)!.text("skip"),
+                style: const TextStyle(
                   fontSize: 22,
                 ),
               ),
@@ -98,7 +98,9 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                       onPressed: () {
                         context.pop();
                       },
-                      child: const Text('Comenzar'),
+                      child: Text(
+                        AppLocalizations.of(context)!.text("skip"),
+                      ),
                     ),
                   ),
                 )
