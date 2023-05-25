@@ -1,4 +1,22 @@
 {
     "buttons": "Buttons",
-    "var_buttons": "Various Buttons on Flutter"
+    "sub_buttons": "Various Buttons on Flutter",
+    "cards": "Cards",
+    "sub_cards": "A Stylized Container",
+    "progress_indicators": "Progress Indicators",
+    "sub_proInd": "General and Controlled",
+    "snackbars_dialogs": "Snackbars and dialogs",
+    "sub_snack_dia": "On-Screen Indicators",
+    "anim_contain": "Animated Container",
+    "sub_anim_cont": "Stateful Animated Widget",
+    "ui_cont_tiles": "UI Controls + Tiles",
+    "sub_ui_cont_tiles": "A series of Flutter Controls",
+    "app_intro": "Introduction to the application",
+    "app_intro_sub": "Small Introductory Tutorial",
+    "infinite_scroll": "Infinite Scroll y Axis",
+    "sub_infi_scroll": "Infinite lists and pull to refresh",
+    "counter_sceen": "Counter Sceen",
+    "sub_counter": "Exercise with Riverpod",
+    "change_theme": "Change Theme",
+    "change_apptheme": "Change App Theme"
 }
