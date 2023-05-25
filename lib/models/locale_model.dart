@@ -1,59 +1,57 @@
-// To parse this JSON data, do
-//
-//     final localeModel = localeModelFromJson(jsonString);
-
-import 'dart:convert';
-
-LocaleModel localeModelFromJson(String str) =>
-    LocaleModel.fromJson(json.decode(str));
-
-String localeModelToJson(LocaleModel data) => json.encode(data.toJson());
-
 class LocaleModel {
-  String buttons;
-  String subButtons;
-  String cards;
-  String subCards;
-  String progressIndicators;
-  String subProInd;
-  String snackbarsDialogs;
-  String subSnackDia;
-  String animContain;
-  String subAnimCont;
-  String uiContTiles;
-  String subUiContTiles;
-  String appIntro;
-  String appIntroSub;
-  String infiniteScroll;
-  String subInfiScroll;
-  String counterSceen;
-  String subCounter;
-  String changeTheme;
-  String changeApptheme;
-  String introTit1;
-  String introSub1;
-  String introTit2;
-  String introSub2;
-  String introTit3;
-  String introSub3;
-  String skip;
-  String start;
-  String count;
-  String checked;
-  String thisColor;
-  String additionalControls;
-  String transportVehicles;
-  String byCar;
-  String travelByCar;
-  String byPlane;
-  String travelByPlane;
-  String byBoat;
-  String travelByBoat;
-  String bySubmarine;
-  String travelBySubm;
-  String breakfast;
-  String lunch;
-  String dinner;
+  late String buttons;
+  late String subButtons;
+  late String cards;
+  late String subCards;
+  late String progressIndicators;
+  late String subProInd;
+  late String snackbarsDialogs;
+  late String subSnackDia;
+  late String animContain;
+  late String subAnimCont;
+  late String uiContTiles;
+  late String subUiContTiles;
+  late String appIntro;
+  late String appIntroSub;
+  late String infiniteScroll;
+  late String subInfiScroll;
+  late String counterSceen;
+  late String subCounter;
+  late String changeTheme;
+  late String changeApptheme;
+  late String introTit1;
+  late String introSub1;
+  late String introTit2;
+  late String introSub2;
+  late String introTit3;
+  late String introSub3;
+  late String skip;
+  late String start;
+  late String count;
+  late String checked;
+  late String thisColor;
+  late String additionalControls;
+  late String transportVehicles;
+  late String byCar;
+  late String travelByCar;
+  late String byPlane;
+  late String travelByPlane;
+  late String byBoat;
+  late String travelByBoat;
+  late String bySubmarine;
+  late String travelBySubm;
+  late String breakfast;
+  late String lunch;
+  late String dinner;
+  late String showSnackbar;
+  late String showDialog;
+  late String dialogMsg;
+  late String licenseUsed;
+  late String youreSure;
+  late String agreeMsg;
+  late String cancel;
+  late String confirm;
+  late String helloWorld;
 
   LocaleModel({
     required this.buttons,
@@ -100,99 +98,127 @@ class LocaleModel {
     required this.breakfast,
     required this.lunch,
     required this.dinner,
+    required this.showSnackbar,
+    required this.showDialog,
+    required this.dialogMsg,
+    required this.licenseUsed,
+    required this.youreSure,
+    required this.agreeMsg,
+    required this.cancel,
+    required this.confirm,
+    required this.helloWorld,
   });
 
-  factory LocaleModel.fromJson(Map<String, dynamic> json) => LocaleModel(
-        buttons: json["buttons"],
-        subButtons: json["sub_buttons"],
-        cards: json["cards"],
-        subCards: json["sub_cards"],
-        progressIndicators: json["progress_indicators"],
-        subProInd: json["sub_proInd"],
-        snackbarsDialogs: json["snackbars_dialogs"],
-        subSnackDia: json["sub_snack_dia"],
-        animContain: json["anim_contain"],
-        subAnimCont: json["sub_anim_cont"],
-        uiContTiles: json["ui_cont_tiles"],
-        subUiContTiles: json["sub_ui_cont_tiles"],
-        appIntro: json["app_intro"],
-        appIntroSub: json["app_intro_sub"],
-        infiniteScroll: json["infinite_scroll"],
-        subInfiScroll: json["sub_infi_scroll"],
-        counterSceen: json["counter_sceen"],
-        subCounter: json["sub_counter"],
-        changeTheme: json["change_theme"],
-        changeApptheme: json["change_apptheme"],
-        introTit1: json["intro_tit_1"],
-        introSub1: json["intro_sub_1"],
-        introTit2: json["intro_tit_2"],
-        introSub2: json["intro_sub_2"],
-        introTit3: json["intro_tit_3"],
-        introSub3: json["intro_sub_3"],
-        skip: json["skip"],
-        start: json["start"],
-        count: json["count"],
-        checked: json["checked"],
-        thisColor: json["this_color"],
-        additionalControls: json["additional_controls"],
-        transportVehicles: json["transport_vehicles"],
-        byCar: json["by_car"],
-        travelByCar: json["travel_by_car"],
-        byPlane: json["by plane"],
-        travelByPlane: json["travel_by_plane"],
-        byBoat: json["by boat"],
-        travelByBoat: json["travel_by_boat"],
-        bySubmarine: json["by_submarine"],
-        travelBySubm: json["travel_by_subm"],
-        breakfast: json["breakfast"],
-        lunch: json["lunch"],
-        dinner: json["dinner"],
-      );
+  LocaleModel.fromJson(Map<String, dynamic> json) {
+    buttons = json['buttons'] ?? "";
+    subButtons = json['sub_buttons'] ?? "";
+    cards = json['cards'] ?? "";
+    subCards = json['sub_cards'] ?? "";
+    progressIndicators = json['progress_indicators'] ?? "";
+    subProInd = json['sub_proInd'] ?? "";
+    snackbarsDialogs = json['snackbars_dialogs'] ?? "";
+    subSnackDia = json['sub_snack_dia'] ?? "";
+    animContain = json['anim_contain'] ?? "";
+    subAnimCont = json['sub_anim_cont'] ?? "";
+    uiContTiles = json['ui_cont_tiles'] ?? "";
+    subUiContTiles = json['sub_ui_cont_tiles'] ?? "";
+    appIntro = json['app_intro'] ?? "";
+    appIntroSub = json['app_intro_sub'] ?? "";
+    infiniteScroll = json['infinite_scroll'] ?? "";
+    subInfiScroll = json['sub_infi_scroll'] ?? "";
+    counterSceen = json['counter_sceen'] ?? "";
+    subCounter = json['sub_counter'] ?? "";
+    changeTheme = json['change_theme'] ?? "";
+    changeApptheme = json['change_apptheme'] ?? "";
+    introTit1 = json['intro_tit_1'] ?? "";
+    introSub1 = json['intro_sub_1'] ?? "";
+    introTit2 = json['intro_tit_2'] ?? "";
+    introSub2 = json['intro_sub_2'] ?? "";
+    introTit3 = json['intro_tit_3'] ?? "";
+    introSub3 = json['intro_sub_3'] ?? "";
+    skip = json['skip'] ?? "";
+    start = json['start'] ?? "";
+    count = json['count'] ?? "";
+    checked = json['checked'] ?? "";
+    thisColor = json['this_color'] ?? "";
+    additionalControls = json['additional_controls'] ?? "";
+    transportVehicles = json['transport_vehicles'] ?? "";
+    byCar = json['by_car'] ?? "";
+    travelByCar = json['travel_by_car'] ?? "";
+    byPlane = json['by plane'] ?? "";
+    travelByPlane = json['travel_by_plane'] ?? "";
+    byBoat = json['by boat'] ?? "";
+    travelByBoat = json['travel_by_boat'] ?? "";
+    bySubmarine = json['by_submarine'] ?? "";
+    travelBySubm = json['travel_by_subm'] ?? "";
+    breakfast = json['breakfast'] ?? "";
+    lunch = json['lunch'] ?? "";
+    dinner = json['dinner'] ?? "";
+    showSnackbar = json['show_snackbar'] ?? "";
+    showDialog = json['show_dialog'] ?? "";
+    dialogMsg = json['dialog_msg'] ?? "";
+    licenseUsed = json['license_used'] ?? "";
+    youreSure = json['youre_sure'] ?? "";
+    agreeMsg = json['agree_msg'] ?? "";
+    cancel = json['cancel'] ?? "";
+    confirm = json['confirm'] ?? "";
+    helloWorld = json['hello_world'] ?? "";
+  }
 
-  Map<String, dynamic> toJson() => {
-        "buttons": buttons,
-        "sub_buttons": subButtons,
-        "cards": cards,
-        "sub_cards": subCards,
-        "progress_indicators": progressIndicators,
-        "sub_proInd": subProInd,
-        "snackbars_dialogs": snackbarsDialogs,
-        "sub_snack_dia": subSnackDia,
-        "anim_contain": animContain,
-        "sub_anim_cont": subAnimCont,
-        "ui_cont_tiles": uiContTiles,
-        "sub_ui_cont_tiles": subUiContTiles,
-        "app_intro": appIntro,
-        "app_intro_sub": appIntroSub,
-        "infinite_scroll": infiniteScroll,
-        "sub_infi_scroll": subInfiScroll,
-        "counter_sceen": counterSceen,
-        "sub_counter": subCounter,
-        "change_theme": changeTheme,
-        "change_apptheme": changeApptheme,
-        "intro_tit_1": introTit1,
-        "intro_sub_1": introSub1,
-        "intro_tit_2": introTit2,
-        "intro_sub_2": introSub2,
-        "intro_tit_3": introTit3,
-        "intro_sub_3": introSub3,
-        "skip": skip,
-        "start": start,
-        "count": count,
-        "checked": checked,
-        "this_color": thisColor,
-        "additional_controls": additionalControls,
-        "transport_vehicles": transportVehicles,
-        "by_car": byCar,
-        "travel_by_car": travelByCar,
-        "by plane": byPlane,
-        "travel_by_plane": travelByPlane,
-        "by boat": byBoat,
-        "travel_by_boat": travelByBoat,
-        "by_submarine": bySubmarine,
-        "travel_by_subm": travelBySubm,
-        "breakfast": breakfast,
-        "lunch": lunch,
-        "dinner": dinner,
-      };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['buttons'] = buttons;
+    data['sub_buttons'] = subButtons;
+    data['cards'] = cards;
+    data['sub_cards'] = subCards;
+    data['progress_indicators'] = progressIndicators;
+    data['sub_proInd'] = subProInd;
+    data['snackbars_dialogs'] = snackbarsDialogs;
+    data['sub_snack_dia'] = subSnackDia;
+    data['anim_contain'] = animContain;
+    data['sub_anim_cont'] = subAnimCont;
+    data['ui_cont_tiles'] = uiContTiles;
+    data['sub_ui_cont_tiles'] = subUiContTiles;
+    data['app_intro'] = appIntro;
+    data['app_intro_sub'] = appIntroSub;
+    data['infinite_scroll'] = infiniteScroll;
+    data['sub_infi_scroll'] = subInfiScroll;
+    data['counter_sceen'] = counterSceen;
+    data['sub_counter'] = subCounter;
+    data['change_theme'] = changeTheme;
+    data['change_apptheme'] = changeApptheme;
+    data['intro_tit_1'] = introTit1;
+    data['intro_sub_1'] = introSub1;
+    data['intro_tit_2'] = introTit2;
+    data['intro_sub_2'] = introSub2;
+    data['intro_tit_3'] = introTit3;
+    data['intro_sub_3'] = introSub3;
+    data['skip'] = skip;
+    data['start'] = start;
+    data['count'] = count;
+    data['checked'] = checked;
+    data['this_color'] = thisColor;
+    data['additional_controls'] = additionalControls;
+    data['transport_vehicles'] = transportVehicles;
+    data['by_car'] = byCar;
+    data['travel_by_car'] = travelByCar;
+    data['by plane'] = byPlane;
+    data['travel_by_plane'] = travelByPlane;
+    data['by boat'] = byBoat;
+    data['travel_by_boat'] = travelByBoat;
+    data['by_submarine'] = bySubmarine;
+    data['travel_by_subm'] = travelBySubm;
+    data['breakfast'] = breakfast;
+    data['lunch'] = lunch;
+    data['dinner'] = dinner;
+    data['show_snackbar'] = showSnackbar;
+    data['show_dialog'] = showDialog;
+    data['dialog_msg'] = dialogMsg;
+    data['license_used'] = licenseUsed;
+    data['youre_sure'] = youreSure;
+    data['agree_msg'] = agreeMsg;
+    data['cancel'] = cancel;
+    data['confirm'] = confirm;
+    return data;
+  }
 }
