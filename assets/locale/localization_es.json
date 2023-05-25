@@ -29,5 +29,18 @@
     "start": "Comenzar",
     "count": "Valor",
     "checked": "Controlado",
-    "this_color": "Este color"
+    "this_color": "Este color",
+    "additional_controls": "Controles adicionales",
+    "transport_vehicles": "Vehículos de Transportes",
+    "by_car": "by car",
+    "travel_by_car": "Viajar por carro",
+    "by plane": "by plane",
+    "travel_by_plane": "Viajar por avión",
+    "by boat": "by boat",
+    "travel_by_boat": "Viajar por barco",
+    "by_submarine": "by submarine",
+    "travel_by_subm": "Viajar por submarino",
+    "breakfast": "Desayuno",
+    "lunch": "Almuerzo",
+    "dinner": "Cena"
 }
