@@ -12,7 +12,9 @@ A simple show case of Flutter Widgets along with Material UI3.
 
 ## Screenshots
 
-![](widgets.mp4)
+
+https://github.com/jinosh05/flutter_widgets_app/assets/51468789/44a194c2-0337-4b05-b539-eaca805bf156
+
 
 ## Build Instructions
 
