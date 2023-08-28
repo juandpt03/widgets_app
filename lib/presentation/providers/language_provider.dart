@@ -3,18 +3,18 @@ import 'package:widgets_app/models/language_model.dart';
 
 final locale = StateProvider<LanguageEntity>(
   (selectedLang) => const LanguageEntity(
-    code: "en",
-    value: "IN",
-    text: "English",
+    code: 'en',
+    value: 'IN',
+    text: 'English',
   ),
 );
 
 final localeProvider = StateNotifierProvider<LangNotifier, LanguageEntity>(
   (ref) => LangNotifier(
     const LanguageEntity(
-      code: "en",
-      value: "IN",
-      text: "English",
+      code: 'en',
+      value: 'IN',
+      text: 'English',
     ),
   ),
 );

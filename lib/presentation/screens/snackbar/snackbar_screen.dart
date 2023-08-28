@@ -5,6 +5,8 @@ import 'package:widgets_app/config/localisation/localizations.dart';
 import 'package:widgets_app/models/locale_model.dart';
 
 class SnackbarScreen extends StatelessWidget {
+
+  const SnackbarScreen({super.key});
   static const route = 'snackbar_screen';
   void showCustomSnackbar(BuildContext context) {
     ScaffoldMessenger.of(context).clearSnackBars();
@@ -45,8 +47,6 @@ class SnackbarScreen extends StatelessWidget {
       ),
     );
   }
-
-  const SnackbarScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

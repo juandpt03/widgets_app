@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MenuItem {
-  final String title;
-  final String subTitle;
-  final String link;
-  final IconData icon;
 
   const MenuItem({
     required this.title,
@@ -12,6 +8,10 @@ class MenuItem {
     required this.link,
     required this.icon,
   });
+  final String title;
+  final String subTitle;
+  final String link;
+  final IconData icon;
 }
 
 //
@@ -53,7 +53,7 @@ const List<MenuItem> appMenuItems = [
       icon: Icons.accessibility_new_rounded,),
   MenuItem(
       title: 'infinite_scroll',
-      subTitle: "sub_infi_scroll",
+      subTitle: 'sub_infi_scroll',
       link: '/infinite',
       icon: Icons.list_alt_outlined,),
   MenuItem(

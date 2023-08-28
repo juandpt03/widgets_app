@@ -6,9 +6,9 @@ import 'package:widgets_app/models/language_model.dart';
 import 'package:widgets_app/models/locale_model.dart';
 
 class AppLocalizations {
-  final Locale locale;
 
   AppLocalizations(this.locale);
+  final Locale locale;
 
   static AppLocalizations? of(BuildContext context) {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
@@ -22,14 +22,14 @@ class AppLocalizations {
 
   Future<AppLocalizations> load(Locale locale) async {
     jsonContent = await rootBundle
-        .loadString("assets/locale/localization_${locale.languageCode}.json");
+        .loadString('assets/locale/localization_${locale.languageCode}.json');
     _localizedValues = jsonDecode(jsonContent);
 
     return this;
   }
 
   String text(String key) {
-    return _localizedValues![key] ?? "$key not found";
+    return _localizedValues![key] ?? '$key not found';
   }
 
   LocaleModel value() {

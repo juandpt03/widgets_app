@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class AnimatedScreen extends StatefulWidget {
-  static const route = 'animated_screen';
 
   const AnimatedScreen({super.key});
+  static const route = 'animated_screen';
 
   @override
   State<AnimatedScreen> createState() => _AnimatedScreenState();

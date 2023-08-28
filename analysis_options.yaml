@@ -77,10 +77,6 @@ linter:
     - deprecated_consistency
     # - diagnostic_describe_all_properties
     - directives_ordering
-    # Pretty much agree with Passy & linter package.
-    # Our use case for Flutter for web where there are no flavors yet.
-    # So using dart-define is helpful.
-    #- do_not_use_environment
     - empty_catches
     - empty_constructor_bodies
     - empty_statements
@@ -89,13 +85,11 @@ linter:
     - file_names
     - hash_and_equals
     - implementation_imports
-    # deprecated rule in Flutter 3.7
-    # - invariant_booleans
     - join_return_with_assignment
     - leading_newlines_in_multiline_strings
     - library_names
     - library_prefixes
-    # - lines_longer_than_80_chars
+    - lines_longer_than_80_chars
     - literal_only_boolean_expressions
     - no_adjacent_strings_in_list
     - no_duplicate_case_values
@@ -122,22 +116,11 @@ linter:
     - prefer_contains
     # These two are incompatible, and one should be selected depending on your project's style.
     # - prefer_double_quotes
-    # - prefer_single_quotes
-    # removed in Dart 3.0.0
-    # - prefer_equal_for_default_values
-    # Not used, as the default app template has a single statement return code generated.
-    # While this could be beneficial for Dart projects and maintaining code style, we are unaware
-    # of any substantial evidence that improves code when using expression function body
-    # vs single statement return. We are considering including this in Dart only lints.
-    #   - prefer_expression_function_bodies
+    - prefer_single_quotes
     - prefer_final_fields
     - prefer_final_in_for_each
     - prefer_final_locals
-    # While it is similar to `unnecessary_lambdas`,
-    # it forcefully replaces structural/procedural semantics with
-    # their functional counterparts.
-    # We think this is a stylistic choice and will leave it up to users.
-    # - prefer_foreach
+    - prefer_foreach
     - prefer_for_elements_to_map_fromIterable
     - prefer_function_declarations_over_variables
     - prefer_generic_function_type_aliases
@@ -164,10 +147,8 @@ linter:
     - sized_box_shrink_expand
     - slash_for_doc_comments
     - sort_child_properties_last
-    # We tend to use class organization close to standard Java convention, where fields come first.
-    # Martin, R. C. & Coplien, J. O. (2013), Chapter 10: Classes. Clean code: a handbook of agile software craftsmanship , Prentice Hall , Upper Saddle River, NJ [etc.] . 136
-    #    - sort_constructors_first
-    # - sort_pub_dependencies
+    - sort_constructors_first
+    - sort_pub_dependencies
     - sort_unnamed_constructors_first
     - test_types_in_equals
     - throw_in_finally

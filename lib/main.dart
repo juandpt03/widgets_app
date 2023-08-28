@@ -32,7 +32,7 @@ class MainApp extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: const [Locale('en', 'IN'), Locale('es', "ES")],
+      supportedLocales: const [Locale('en', 'IN'), Locale('es', 'ES')],
       localeResolutionCallback:
           (Locale? locale, Iterable<Locale> supportedLocales) {
         for (final Locale supportedLocale in supportedLocales) {

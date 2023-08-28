@@ -4,21 +4,21 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/localisation/localizations.dart';
 
 class SlideInfo {
-  final String title;
-  final String caption;
-  final String imageUrl;
 
   SlideInfo({
     required this.title,
     required this.caption,
     required this.imageUrl,
   });
+  final String title;
+  final String caption;
+  final String imageUrl;
 }
 
 class AppTutorialScreen extends StatefulWidget {
-  static const route = 'tutorial_screen';
 
   const AppTutorialScreen({super.key});
+  static const route = 'tutorial_screen';
 
   @override
   State<AppTutorialScreen> createState() => _AppTutorialScreenState();
@@ -54,8 +54,8 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
     slides = <SlideInfo>[
       for (var i = 1; i <= 3; i++)
         SlideInfo(
-            title: AppLocalizations.of(context)!.text("intro_tit_$i"),
-            caption: AppLocalizations.of(context)!.text("intro_sub_$i"),
+            title: AppLocalizations.of(context)!.text('intro_tit_$i'),
+            caption: AppLocalizations.of(context)!.text('intro_sub_$i'),
             imageUrl: 'assets/images/$i.png',),
     ];
     return Scaffold(
@@ -77,7 +77,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
             top: 50,
             child: TextButton(
               child: Text(
-                AppLocalizations.of(context)!.text("skip"),
+                AppLocalizations.of(context)!.text('skip'),
                 style: const TextStyle(
                   fontSize: 22,
                 ),
@@ -98,7 +98,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                         context.pop();
                       },
                       child: Text(
-                        AppLocalizations.of(context)!.text("skip"),
+                        AppLocalizations.of(context)!.text('skip'),
                       ),
                     ),
                   ),
@@ -110,11 +110,11 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
 }
 
 class _Slide extends StatelessWidget {
+  const _Slide(
+      {required this.title, required this.caption, required this.imageUrl,});
   final String title;
   final String caption;
   final String imageUrl;
-  const _Slide(
-      {required this.title, required this.caption, required this.imageUrl,});
 
   @override
   Widget build(BuildContext context) {

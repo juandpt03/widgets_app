@@ -4,9 +4,9 @@ import 'package:widgets_app/config/localisation/localizations.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 class ThemeChanger extends ConsumerWidget {
-  static const route = 'theme_changer';
 
   const ThemeChanger({super.key});
+  static const route = 'theme_changer';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -6,9 +6,9 @@ import 'package:widgets_app/presentation/widgets/side_menu.dart';
 // import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  static const String route = 'home_screen';
 
   const HomeScreen({super.key});
+  static const String route = 'home_screen';
 
   @override
   Widget build(BuildContext context) {

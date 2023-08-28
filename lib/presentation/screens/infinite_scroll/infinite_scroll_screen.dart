@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
-  static const route = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
+  static const route = 'infinite_screen';
 
   @override
   State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
