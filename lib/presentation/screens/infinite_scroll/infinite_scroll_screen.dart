@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
-  static const route = 'infinite_screen';
 
   const InfiniteScrollScreen({super.key});
+  static const route = 'infinite_screen';
 
   @override
   State<InfiniteScrollScreen> createState() => _InfiniteScrollScreenState();
@@ -40,7 +40,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         scrollController.position.maxScrollExtent) return;
     scrollController.animateTo(scrollController.position.pixels + 120,
         duration: const Duration(milliseconds: 300),
-        curve: Curves.fastOutSlowIn);
+        curve: Curves.fastOutSlowIn,);
   }
 
   void addFiveImages() {

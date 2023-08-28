@@ -12,9 +12,9 @@ class SideMenu extends ConsumerWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
   final ValueNotifier<int> navDrawerIndex = ValueNotifier(0);
   @override
-  Widget build(BuildContext context, ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final LanguageEntity locale = ref.watch(localeProvider) ??
-        const LanguageEntity(code: "en", value: "IN", text: "Emglish");
+        const LanguageEntity(code: 'en', value: 'IN', text: 'Emglish');
     return ValueListenableBuilder(
       valueListenable: navDrawerIndex,
       builder: (BuildContext context, int value, Widget? child) {
@@ -57,7 +57,7 @@ class SideMenu extends ConsumerWidget {
               underline: const SizedBox(),
               padding: const EdgeInsets.symmetric(horizontal: 35),
               hint: Text(
-                locale.text ?? "Select Language",
+                locale.text ?? 'Select Language',
                 style: const TextStyle(
                   color: Colors.black,
                 ),
@@ -67,9 +67,9 @@ class SideMenu extends ConsumerWidget {
                   DropdownMenuItem(
                     value: Languages.languages[i],
                     child: Text(
-                      Languages.languages[i].text ?? "",
+                      Languages.languages[i].text ?? '',
                     ),
-                  )
+                  ),
               ],
               onChanged: (value) {
                 if (value != null) {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/localisation/localizations.dart';
-import '../../../models/locale_model.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
+import 'package:widgets_app/models/locale_model.dart';
 
 class UiControlsScreen extends StatelessWidget {
-  static const route = 'ui_controls_screen';
 
   const UiControlsScreen({super.key});
+  static const route = 'ui_controls_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _UIControlsViewState extends State<UIControlsView> {
     ///
     /// Class File with localised text
     ///
-    LocaleModel st = AppLocalizations.of(context)!.value();
+    final LocaleModel st = AppLocalizations.of(context)!.value();
     return ListView(
       physics: const ClampingScrollPhysics(),
       children: [
@@ -101,7 +101,7 @@ class _UIControlsViewState extends State<UIControlsView> {
           ],
         ),
         CheckboxListTile(
-          title: Text("${st.breakfast}?"),
+          title: Text('${st.breakfast}?'),
           value: wantsBreakfast,
           onChanged: (value) {
             wantsBreakfast = !wantsBreakfast;
@@ -109,7 +109,7 @@ class _UIControlsViewState extends State<UIControlsView> {
           },
         ),
         CheckboxListTile(
-          title: Text("${st.lunch}?"),
+          title: Text('${st.lunch}?'),
           value: wantsLunch,
           onChanged: (value) {
             wantsLunch = !wantsLunch;
@@ -117,13 +117,13 @@ class _UIControlsViewState extends State<UIControlsView> {
           },
         ),
         CheckboxListTile(
-          title: Text("${st.dinner}?"),
+          title: Text('${st.dinner}?'),
           value: wantsDinner,
           onChanged: (value) {
             wantsDinner = !wantsDinner;
             setState(() {});
           },
-        )
+        ),
       ],
     );
   }

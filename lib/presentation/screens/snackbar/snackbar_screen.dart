@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../config/localisation/localizations.dart';
-import '../../../models/locale_model.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
+import 'package:widgets_app/models/locale_model.dart';
 
 class SnackbarScreen extends StatelessWidget {
+
+  const SnackbarScreen({super.key});
   static const route = 'snackbar_screen';
   void showCustomSnackbar(BuildContext context) {
     ScaffoldMessenger.of(context).clearSnackBars();
@@ -21,7 +23,7 @@ class SnackbarScreen extends StatelessWidget {
   }
 
   void openDialog(BuildContext context) {
-    LocaleModel st = AppLocalizations.of(context)!.value();
+    final LocaleModel st = AppLocalizations.of(context)!.value();
     showDialog(
       barrierDismissible: false,
       context: context,
@@ -40,20 +42,18 @@ class SnackbarScreen extends StatelessWidget {
               context.pop();
             },
             child: Text(st.confirm),
-          )
+          ),
         ],
       ),
     );
   }
-
-  const SnackbarScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     ///
     /// Class File with localised text
     ///
-    LocaleModel st = AppLocalizations.of(context)!.value();
+    final LocaleModel st = AppLocalizations.of(context)!.value();
     return Scaffold(
       appBar: AppBar(
         title: Text(st.snackbarsDialogs),

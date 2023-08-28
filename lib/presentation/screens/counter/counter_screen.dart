@@ -5,8 +5,8 @@ import 'package:widgets_app/presentation/providers/counter_provider.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 class CounterScreen extends ConsumerWidget {
-  static const route = 'counter_screen';
   const CounterScreen({super.key});
+  static const route = 'counter_screen';
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final style = Theme.of(context).textTheme.titleLarge;
@@ -21,7 +21,7 @@ class CounterScreen extends ConsumerWidget {
             onPressed: () {
               ref.read(themeNotifierProvider.notifier).toggleDarkMode();
             },
-          )
+          ),
         ],
       ),
       body: Center(
