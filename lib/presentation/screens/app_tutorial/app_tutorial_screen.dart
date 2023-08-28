@@ -56,7 +56,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
         SlideInfo(
             title: AppLocalizations.of(context)!.text("intro_tit_$i"),
             caption: AppLocalizations.of(context)!.text("intro_sub_$i"),
-            imageUrl: 'assets/images/$i.png'),
+            imageUrl: 'assets/images/$i.png',),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
@@ -69,7 +69,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                 .map((slide) => _Slide(
                     title: slide.title,
                     imageUrl: slide.imageUrl,
-                    caption: slide.caption))
+                    caption: slide.caption,),)
                 .toList(),
           ),
           Positioned(
@@ -87,8 +87,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               },
             ),
           ),
-          endReach
-              ? Positioned(
+          if (endReach) Positioned(
                   bottom: 30,
                   right: 30,
                   child: FadeInRight(
@@ -103,8 +102,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                       ),
                     ),
                   ),
-                )
-              : const SizedBox()
+                ) else const SizedBox(),
         ],
       ),
     );
@@ -116,7 +114,7 @@ class _Slide extends StatelessWidget {
   final String caption;
   final String imageUrl;
   const _Slide(
-      {required this.title, required this.caption, required this.imageUrl});
+      {required this.title, required this.caption, required this.imageUrl,});
 
   @override
   Widget build(BuildContext context) {

@@ -40,11 +40,11 @@ class _ButtonsView extends StatelessWidget {
           children: [
             ElevatedButton(onPressed: () {}, child: const Text('Elevated')),
             const ElevatedButton(
-                onPressed: null, child: Text('Elevated Disabled')),
+                onPressed: null, child: Text('Elevated Disabled'),),
             ElevatedButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.access_alarm_rounded),
-                label: const Text('Elevated Icon')),
+                label: const Text('Elevated Icon'),),
             FilledButton(onPressed: () {}, child: const Text('Filled')),
             FilledButton.icon(
               onPressed: () {},
@@ -55,7 +55,7 @@ class _ButtonsView extends StatelessWidget {
             OutlinedButton.icon(
                 onPressed: () {},
                 label: const Text('Outline Icon'),
-                icon: const Icon(Icons.terminal)),
+                icon: const Icon(Icons.terminal),),
             TextButton(onPressed: () {}, child: const Text('Text')),
             TextButton.icon(
               onPressed: () {},
@@ -65,7 +65,7 @@ class _ButtonsView extends StatelessWidget {
             const CustomButton(),
             IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.app_registration_rounded)),
+                icon: const Icon(Icons.app_registration_rounded),),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.app_registration_rounded),
@@ -96,7 +96,7 @@ class CustomButton extends StatelessWidget {
           onTap: () {},
           child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text('Hola Mundo', style: TextStyle(color: Colors.white))),
+              child: Text('Hola Mundo', style: TextStyle(color: Colors.white)),),
         ),
       ),
     );

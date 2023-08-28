@@ -21,7 +21,7 @@ class CounterScreen extends ConsumerWidget {
             onPressed: () {
               ref.read(themeNotifierProvider.notifier).toggleDarkMode();
             },
-          )
+          ),
         ],
       ),
       body: Center(

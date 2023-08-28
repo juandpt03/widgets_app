@@ -40,7 +40,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         scrollController.position.maxScrollExtent) return;
     scrollController.animateTo(scrollController.position.pixels + 120,
         duration: const Duration(milliseconds: 300),
-        curve: Curves.fastOutSlowIn);
+        curve: Curves.fastOutSlowIn,);
   }
 
   void addFiveImages() {

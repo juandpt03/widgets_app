@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/localisation/localizations.dart';
-import '../../../models/locale_model.dart';
+import 'package:widgets_app/config/localisation/localizations.dart';
+import 'package:widgets_app/models/locale_model.dart';
 
 class UiControlsScreen extends StatelessWidget {
   static const route = 'ui_controls_screen';
@@ -39,7 +39,7 @@ class _UIControlsViewState extends State<UIControlsView> {
     ///
     /// Class File with localised text
     ///
-    LocaleModel st = AppLocalizations.of(context)!.value();
+    final LocaleModel st = AppLocalizations.of(context)!.value();
     return ListView(
       physics: const ClampingScrollPhysics(),
       children: [
@@ -123,7 +123,7 @@ class _UIControlsViewState extends State<UIControlsView> {
             wantsDinner = !wantsDinner;
             setState(() {});
           },
-        )
+        ),
       ],
     );
   }

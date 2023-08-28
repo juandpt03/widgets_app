@@ -34,7 +34,7 @@ class _ProgressView extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           Text(
-              'Circular Progress indicator ${AppLocalizations.of(context)!.text('checked')} '),
+              'Circular Progress indicator ${AppLocalizations.of(context)!.text('checked')} ',),
           const SizedBox(height: 10),
           const _ControlledProgressIndicator(),
         ],
@@ -67,9 +67,9 @@ class _ControlledProgressIndicator extends StatelessWidget {
               Expanded(
                   child: LinearProgressIndicator(
                 value: progressValue,
-              ))
+              ),),
             ],
           );
-        });
+        },);
   }
 }

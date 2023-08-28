@@ -18,7 +18,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   double bordeRadius = 10;
 
   void changeShape() {
-    Random rnd = Random();
+    final Random rnd = Random();
     width = rnd.nextInt(300) + 50;
     height = rnd.nextInt(300) + 50;
     bordeRadius = rnd.nextInt(300) + 10;
@@ -44,9 +44,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          changeShape();
-        },
+        onPressed: changeShape,
         child: const Icon(Icons.play_arrow),
       ),
     );
