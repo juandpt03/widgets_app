@@ -5,9 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:widgets_app/models/language_model.dart';
 import 'package:widgets_app/models/locale_model.dart';
 
-// import '../models/language_model.dart';
-// import '../models/locale_model.dart';
-
 class AppLocalizations {
   final Locale locale;
 
